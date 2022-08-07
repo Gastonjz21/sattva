@@ -1,0 +1,73 @@
+.formulario{
+    background-color: #64a223;
+    border-radius: 20px;
+    width: 25%;
+    padding: 20px;
+    position: relative;
+    margin: auto;
+    margin-top: 50px;
+    z-index: 0;
+    color: #ffffff;
+    text-align: center;
+}
+
+input, textarea{
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #00CD08;
+    border-radius: 5px;
+}
+
+select{
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #00CD08;
+    border-radius: 5px;
+}
+
+
+input:focus, textarea:focus {
+    border: 2px solid #93FF97;
+
+}
+
+textarea {
+    resize: vertical;
+    max-height: 200px;
+    min-height: 90px;
+}
+
+input[type= "submit"] {
+    background: #2DFD9D;
+    border: none;
+    margin-bottom: 0px;
+}
+
+input[type= "submit"]:hover {
+    background: #A5FFD6;
+    cursor: pointer;
+}
+
+
+.parrafoform{
+    font-size: 20px;
+    padding-top: 8px;
+}
+
+.fa-envelope{
+    font-size: 25px;
+}
+
+.cajatexto::-webkit-scrollbar {
+        width: 10px;
+    }
+    
+    .cajatexto::-webkit-scrollbar-thumb {
+    background: rgba(0, 237, 7, 0.5);
+    border-radius: 50px;
+    border-right: 2px solid #fff;
+    }

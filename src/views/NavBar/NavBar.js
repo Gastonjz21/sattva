@@ -1,4 +1,5 @@
 import './navbar.css'
+import {Link} from 'react-scroll'
 
 function NavBar() {
   return (
@@ -6,10 +7,10 @@ function NavBar() {
       <nav>
         <ul>
           <li class="nos">
-            <a href="#nosotros">Nosotros</a>
+            <Link to="nosotros" spy={true} smooth={true} offset={-100} duration={500}>Nosotros</Link>
           </li>
           <li class="mar">
-            <a href="#marcas">Marcas</a>
+          <Link to="marcas" spy={true} smooth={true} offset={-80} duration={500}>Marcas</Link>
           </li>
         </ul>
 
@@ -18,7 +19,7 @@ function NavBar() {
             <a href="products.html">Productos</a>
           </li>
           <li class="con">
-            <a href="#contacto">Contacto</a>
+          <Link to="contacto" spy={true} smooth={true} offset={-100} duration={500}>Contacto</Link>
           </li>
         </ul>
       </nav>

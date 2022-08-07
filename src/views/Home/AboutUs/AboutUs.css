@@ -1,0 +1,41 @@
+.bggrey {
+	width: 100%;
+    background: #ffffff;
+}
+
+.title h1 {
+    padding-top: 60px;
+}
+
+section{
+	width: 100%;
+	text-align: center;
+}
+
+section .title h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 45px;
+    letter-spacing: 5px;
+    margin-top: 0;
+    color: #1d1d1d;
+	margin: 0px 0px 11px;
+}
+
+
+section .title h1.no-subtitle:after {
+    content: "";
+    background: #c4d696;
+    width: 200px;
+    height: 8px;
+    display: block;
+    margin: 50px auto 30px auto;
+}
+
+
+
+
+.p-description {
+	padding: 20px;
+}

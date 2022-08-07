@@ -8,14 +8,12 @@ nav{
 }
 
 ul{
-    display: block;
-    float: left;
+    display: flex;
     list-style: none;
     font-size: 18px;
 }
 
 li{
-    float: left;
     text-transform: uppercase;
     width: max-content;
     font-weight: bold;
