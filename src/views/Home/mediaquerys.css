@@ -1,9 +1,5 @@
 @media screen and (max-width: 1105px) {
 
-    a #logo {
-        display: none;
-    }
-
     .img-device {
         position: absolute;
         background-color: #ffffff;

@@ -1,14 +1,5 @@
 /*HEADER PRINCIPAL*/
-header{
-    display: flex;
-    height: 80px;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    justify-content: space-around;
-    z-index: 100;
-}
+
 
 
 /*CABECERA RESPONSIVE*/
@@ -102,6 +93,5 @@ header{
     .logo {
         background-color: #ffffff;
         border-radius: 50%;
-        width: 100px;
-        margin-left: 10px;
+        width: 80px;
     }
