@@ -1,13 +1,16 @@
 .brands {
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    display: inline-block;
+    text-align: center;
 }
+
 .itemsbrandsuniti {
     width: 100px;
     vertical-align: middle;
     padding: 40px;
+    transition: all .3s ease-in-out;
 }
 
+.itemsbrandsuniti:hover {
+    transform: rotate(3deg) scale(1.1);
+}
 
