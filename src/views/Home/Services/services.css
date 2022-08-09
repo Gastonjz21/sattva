@@ -62,6 +62,7 @@ span {
 }
 
 .item p {
+    margin: 15px;
     font-size: 18px;
 }
 
@@ -74,7 +75,7 @@ span {
 
 .fa-truck, .fa-box, .fa-id-badge, .fa-people-carry {
     color: #64a223;
-    font-size: 50px;
+    font-size: 60px;
     margin-bottom: 30px;
     transition: all .3s ease-in-out;
 }
