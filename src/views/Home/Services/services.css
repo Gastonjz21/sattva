@@ -56,7 +56,6 @@ span {
 
 .item{
     display: inline-block;
-    padding: 40px;
     overflow: hidden;
     vertical-align: middle;
     transition: all .3s ease-in-out;
@@ -78,10 +77,4 @@ span {
     font-size: 50px;
     margin-bottom: 30px;
     transition: all .3s ease-in-out;
-}
-
-
-
-.i-h:hover{
-    transform: rotate(3deg) scale(1.1);
 }

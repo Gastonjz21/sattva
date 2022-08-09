@@ -1,11 +1,3 @@
-
-/*CABECERA RESPONSIVE*/
-.cabecera {
-    display: none;
-    justify-content: space-between;
-}
-
-
 /*CONTENEDOR DE LINEAS DIAGONALES*/
 .contain {
     width: 100%;
