@@ -31,7 +31,7 @@ textarea {
 
 button,
 input[type="submit"]{
-  border: thin solid #444;
+  border: none;
   border-radius: 0.25rem;
   padding: 0.5rem 1rem;
   margin: 0 0.5rem 0 0;
@@ -46,4 +46,8 @@ input[type="submit"]{
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
+}
+
+.buttom:hover {
+  background-color: #86995d;
 }

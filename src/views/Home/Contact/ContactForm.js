@@ -59,7 +59,7 @@ const ContactForm = () => {
           value={form.comments}
           required
         ></textarea>
-        <input type="submit" value="Enviar"/>
+        <input type="submit" value="Enviar" className="buttom"/>
       </form>
     </div>
   );

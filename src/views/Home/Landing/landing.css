@@ -9,6 +9,7 @@
 .logo {
   background-color: #ffffff;
   border-radius: 50%;
-  width: 80px;
+  width: 90px;
   cursor: pointer;
+  vertical-align: middle;
 }

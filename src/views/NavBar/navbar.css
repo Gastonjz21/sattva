@@ -6,8 +6,8 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 80px;
-    line-height: 80px;
+    height: 100px;
+    line-height: 100px;
 }
 
 .navegacion-bg {
@@ -86,11 +86,16 @@ ul.active {
         color: none;
         background: none;
     }
+
+    .navegacion {
+        justify-content: space-between;
+    }
+
 }
 
 
 .initial {
-    background-color: #D4F1CF;
+    background-color: #c4d69c;
     position: absolute;
     top: -700;
     left: -5000px;
