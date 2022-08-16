@@ -7,6 +7,7 @@ import AboutUs from "./views/Home/AboutUs/AboutUs";
 import Services from "./views/Home/Services/Services";
 import Brand from "./views/Home/Brands/Brands";
 import ContactForm from "./views/Home/Contact/ContactForm";
+import Footer from "./views/Footer/Footer";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Services />
         <Brand />
         <ContactForm />
+        <Footer />
       </>
     </div>
   );
