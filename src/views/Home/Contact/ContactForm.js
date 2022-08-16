@@ -1,9 +1,51 @@
 import { useForm } from "../../../hooks/useForm";
 import './contactform.css'
 
-const initialForm = {};
+const initialForm = {
+    name: "",
+    email: "",
+    subject: "",
+    comments: "",
+};
 
-const validationsForm = (form) => {};
+const validationsForm = (form) => {
+    let errors = {};
+    let regexName = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/;
+    let regexEmail = /^(\w+[/./-]?){1,}@[a-z]+[/.]\w{2,}$/;
+    let regexComments = /^.{1,255}$/;
+
+
+    if(!form.name.trim()) {
+        errors.name = "El campo 'Nombre' es requerido";
+    } else if (!regexName.test(form.name.trim())) {
+        errors.name = "El campo 'Nombre' solo acepta letras y espacios en blanco";
+    }
+
+    if(!form.email.trim()) {
+        errors.email = "El campo 'Email' es requerido";
+    } else if (!regexEmail.test(form.email.trim())) {
+        errors.email = "El campo 'Email' es incorrecto";
+    }
+
+    if(!form.subject.trim()) {
+        errors.subject = "El campo 'Tipo de negocio' es requerido";
+    }
+
+    if(!form.comments.trim()) {
+        errors.comments = "El campo 'Comentarios' es requerido";
+    } else if (!regexComments.test(form.comments.trim())) {
+        errors.comments = "El campo 'Comentarios' no debe exeder los 255 caracteres";
+    }
+
+
+
+    return errors;
+};
+
+let styles = {
+    fontWeight: "bold",
+    color: "#dc3545"
+}
 
 const ContactForm = () => {
   const {
@@ -31,6 +73,7 @@ const ContactForm = () => {
           value={form.name}
           required
         />
+        {errors.name && <p style={styles}>{errors.name}</p>}
         <input
           type="email"
           name="email"
@@ -40,6 +83,7 @@ const ContactForm = () => {
           value={form.email}
           required
         />
+        {errors.email && <p style={styles}>{errors.email}</p>}
         <input
           type="text"
           name="subject"
@@ -49,6 +93,7 @@ const ContactForm = () => {
           value={form.subject}
           required
         />
+        {errors.subject && <p style={styles}>{errors.subject}</p>}
         <textarea
           name="comments"
           cols="50"
@@ -59,6 +104,7 @@ const ContactForm = () => {
           value={form.comments}
           required
         ></textarea>
+        {errors.comments && <p style={styles}>{errors.comments}</p>}
         <input type="submit" value="Enviar" className="buttom"/>
       </form>
     </div>
