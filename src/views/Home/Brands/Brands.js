@@ -7,7 +7,7 @@ function Brand() {
     <article>
 
     <div className="brands" id="marcas">
-      <div class="row title">
+      <div class="title">
         <h2 class="no-subtitle">¿Conoces todas nuestras marcas?</h2>
       </div>
       <div className="itemsbrands">

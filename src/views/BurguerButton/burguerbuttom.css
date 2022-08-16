@@ -5,6 +5,7 @@
     position: relative;
     cursor: pointer;
     display: inline-block;
+    vertical-align: middle;
   }
   .nav-icon-5 span{
     background-color:#1DA206;

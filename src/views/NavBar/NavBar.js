@@ -6,16 +6,34 @@ import BurguerButton from "../BurguerButton/BurguerButton";
 
 function NavBar() {
 
+  //CAMBIO DE COLOR CUANDO SE HACE SCROLL
+  const [color, setColor] = useState(false)
+  const changeColor = () => {
+    if (window.scrollY >= 90) {
+      setColor(true)
+    } else {
+      setColor(false)
+    }
+  }
+
+  window.addEventListener('scroll', changeColor)
+
+  //CONFIGURACION BARRA DE NAVEGACION
   const [clicked, setClicked] = useState(false)
 
   const handleClick = () => {
     //CUANDO ESTA TRUE LO PASA A FALSE Y VICE VERSA
     setClicked(!clicked)
   }
-  
+
+  const handleClose = () => {
+    //CUANDO ESTA TRUE LO PASA A FALSE Y VICE VERSA
+    setClicked(false)
+  }
+
   return (
     <>
-    <div id="menu" class="navegacion">
+    <div id="menu" class={color ? 'navegacion navegacion-bg' : 'navegacion'}>
       <div className="inner">
         {Records &&
           Records.map((record) => {
@@ -30,23 +48,23 @@ function NavBar() {
       <div className={`links ${clicked ? 'active' : ''}`}>
           <ul className={` ${clicked ? 'active' : ''}`}>
             <li> 
-              <Link to="banner" /*onClick={handleClick}*/ spy={true} smooth={true} offset={-10} duration={500}>Home</Link> 
+              <Link to="banner" onClick={handleClose} spy={true} smooth={true} offset={-10} duration={500}>Home</Link> 
             </li>
 
             <li> 
-              <Link to="nosotros" spy={true} smooth={true} offset={-100} duration={500}>Nosotros</Link> 
+              <Link to="nosotros" onClick={handleClose} spy={true} smooth={true} offset={-100} duration={500}>Nosotros</Link> 
             </li>
 
             <li> 
-              <Link to="services" spy={true} smooth={true} offset={-100} duration={500}>Servicios</Link> 
+              <Link to="services" onClick={handleClose} spy={true} smooth={true} offset={-100} duration={500}>Servicios</Link> 
             </li>
 
             <li>
-              <Link to="marcas" spy={true} smooth={true} offset={-80} duration={500}>Marcas</Link>
+              <Link to="marcas" onClick={handleClose} spy={true} smooth={true} offset={-80} duration={500}>Marcas</Link>
             </li>
 
             <li>
-              <Link to="contacto" spy={true} smooth={true} offset={-100} duration={500}>Contacto</Link>
+              <Link to="contact" onClick={handleClose} spy={true} smooth={true} offset={-80} duration={500}>Contacto</Link>
             </li>
                 
             <li>
