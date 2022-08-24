@@ -1,5 +1,7 @@
 import { useForm } from "../../../hooks/useForm";
 import './contactform.css'
+import Loader from "../../../components/Loader"
+import Message from "../../../components/Message"
 
 const initialForm = {
     name: "",
@@ -63,7 +65,7 @@ const ContactForm = () => {
     <div class="title">
       <h2 class="no-subtitle">Formulario de contacto</h2>
     </div>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} target="_blank">
         <input
           type="text"
           name="name"
@@ -107,6 +109,8 @@ const ContactForm = () => {
         {errors.comments && <p style={styles}>{errors.comments}</p>}
         <input type="submit" value="Enviar" className="buttom"/>
       </form>
+      {loading && <Loader/>}
+      {response && <Message msg="Los datos han sido enviados" bgColor="#198754"/>}
     </div>
   );
 };
