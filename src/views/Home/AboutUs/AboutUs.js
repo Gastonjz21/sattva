@@ -15,7 +15,7 @@ function AboutUs() {
               <span>Sattva</span> es una empresa familiar, 100% dedicada a la
               comercialización de productos orgánicos, naturales, sin
               conservantes, agroecologicos y sin TACC.
-              <span>En Sattva creemos en lo que comemos,</span> por eso buscamos
+              <span> En Sattva creemos en lo que comemos,</span> por eso buscamos
               siempre los mejores productos para tu negocio.
             </p>
           </div>
