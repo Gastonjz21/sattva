@@ -6,6 +6,7 @@ import Message from "../../../components/Message"
 const initialForm = {
     name: "",
     email: "",
+    number: "",
     subject: "",
     comments: "",
 };
@@ -28,6 +29,10 @@ const validationsForm = (form) => {
     } else if (!regexEmail.test(form.email.trim())) {
         errors.email = "El campo 'Email' es incorrecto";
     }
+
+    if(!form.number.trim()) {
+      errors.number = "El campo 'Telefono' es requerido";
+  } 
 
     if(!form.subject.trim()) {
         errors.subject = "El campo 'Tipo de negocio' es requerido";
@@ -69,7 +74,7 @@ const ContactForm = () => {
         <input
           type="text"
           name="name"
-          placeholder="Escribe tu nombre"
+          placeholder="Escribe tu nombre completo"
           onBlur={handleBlur}
           onChange={handleChange}
           value={form.name}
@@ -86,6 +91,18 @@ const ContactForm = () => {
           required
         />
         {errors.email && <p style={styles}>{errors.email}</p>}
+
+        <input
+          type="tel"
+          name="number"
+          placeholder="Escribe tu telefono"
+          onBlur={handleBlur}
+          onChange={handleChange}
+          value={form.number}
+          required
+        />
+        {errors.number && <p style={styles}>{errors.number}</p>}
+
         <input
           type="text"
           name="subject"

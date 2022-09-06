@@ -3,7 +3,7 @@ import "./landing.css";
 function Landing() {
   return (
     <>
-      <div id="banner" class="contain">
+      <div id="banner" className="contain">
         </div>
     </>
   );

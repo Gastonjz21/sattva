@@ -33,7 +33,7 @@ function NavBar() {
 
   return (
     <>
-    <div id="menu" class={color ? 'navegacion navegacion-bg' : 'navegacion'}>
+    <div id="menu" className={color ? 'navegacion navegacion-bg' : 'navegacion'}>
       <div className="inner">
         {Records &&
           Records.map((record) => {
