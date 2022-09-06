@@ -5,6 +5,8 @@ import "./contactform.css"
 
 const ContactForm = () => {
   const [user, setUser] = useState({name:"", email:"", phone_number:"", subject:"", cmessage:""});
+  const [success, setSucces] = useState(false);
+  const [error, setError] = useState(false);
 
   const handleChange = function(event) {
     const property = event.target.name
@@ -19,6 +21,12 @@ const ContactForm = () => {
         url:"https://sattbaback.herokuapp.com/api/insertContacto",
         method: "post",
         data: user
+      }
+    ).then(
+      setSucces(true)
+    ).catch(
+      function(error){
+        setError(true)
       }
     )
   }
@@ -72,6 +80,18 @@ const ContactForm = () => {
         ></textarea>
 
         <input type="submit" value="Enviar" className="buttom"/>
+
+        {success &&
+          <div className="alert-succes">
+            Tus daton han sido enviados correctamente.
+        </div>
+        }
+
+        {error &&
+          <div className="alert-error">
+            Tuvimos un inconveniente procesando tus datos.
+        </div>
+        }
 
       </form>
 

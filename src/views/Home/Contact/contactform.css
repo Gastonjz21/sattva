@@ -52,3 +52,27 @@ input[type="submit"]{
 .buttom:hover {
   background-color: #86995d;
 }
+
+
+.alert-succes {
+  width: 50%;
+  margin: auto;
+  margin-top: 20px;
+  color: #00722e;
+  padding: 15px;
+  background-color: #bce1ba;
+  border-radius: 50px;
+  font-size: 20px;
+  transition: all .5s ease;
+}
+
+.alert-error {
+  width: 50%;
+  margin: auto;
+  color: #cc0000;
+  padding: 15px;
+  background-color: #eb7154;
+  border-radius: 50px;
+  font-size: 20px;
+  transition: all .5s ease;
+}
