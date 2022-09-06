@@ -2,15 +2,15 @@ import "./AboutUs.css";
 
 function AboutUs() {
   return (
-    <section class="bggrey" id="nosotros">
-      <div class="container">
+    <section className="bggrey" id="nosotros">
+      <div className="container">
 
-        <div class="row title">
-          <h1 class="no-subtitle">¿Quienes Somos?</h1>
+        <div className="row title">
+          <h1 className="no-subtitle">¿Quienes Somos?</h1>
         </div>
 
-        <div class="row title-description">
-          <div class="p-description">
+        <div className="row title-description">
+          <div className="p-description">
             <p>
               <span>Sattva</span> es una empresa familiar, 100% dedicada a la
               comercialización de productos orgánicos, naturales, sin

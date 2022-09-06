@@ -8,7 +8,7 @@
 
 input[type="text"],
 input[type="email"],
-input[type="tel"],
+input[type="number"],
 textarea {
   border: thin solid #9c9c9c;
   border-radius: 0.25rem;
