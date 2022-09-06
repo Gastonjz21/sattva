@@ -1,22 +1,30 @@
+import axios from "axios";
 import { useState } from "react";
 //import axios from "axios";
 import "./contactform.css"
 
 const ContactForm = () => {
-  const [user, setUser] = useState({name:"", email:"", number:"", subject:"", cmessage:""});
-  console.log(user)
+  const [user, setUser] = useState({name:"", email:"", phone_number:"", subject:"", cmessage:""});
+
   const handleChange = function(event) {
     const property = event.target.name
     const value = event.target.value
     setUser ({ ...user, [property]: value})
   }
 
-  // const handleSubmit = function (event) {
-  //   event.preventDefault()
-  // }
+  const handleSubmit = function (event) {
+    event.preventDefault()
+    axios(
+      {
+        url:"https://sattbaback.herokuapp.com/api/insertContacto",
+        method: "post",
+        data: user
+      }
+    )
+  }
 
   return (
-    <div id="contact" className="contact">
+    <div id="contact" className="contact" onSubmit={handleSubmit}>
     <div className="title">
       <h2 className="no-subtitle">Formulario de contacto</h2>
     </div>
@@ -38,7 +46,7 @@ const ContactForm = () => {
         />
 
         <input
-          type="number"
+          type="tel"
           name="phone_number"
           placeholder="Escribe tu telefono"
           onChange={handleChange}
