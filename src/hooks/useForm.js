@@ -25,10 +25,9 @@ export const useForm = (initialForm, validateForm) => {
     e.preventDefault();
     setErrors(validateForm(form));
     if (Object.keys(errors).length === 0) {
-      alert("Enviando formulario");
       setLoading(true);
       helpHttp()
-        .post("https://formsubmit.co/ajax/gastonjzabala@gmail.com",{
+        .post("https://sattbaback.herokuapp.com/gastonjzabala@gmail.com",{
           body: form,
           headers: {
             "Content-Type": "application/json",
