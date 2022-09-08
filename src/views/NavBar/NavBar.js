@@ -31,6 +31,7 @@ function NavBar() {
     setClicked(false)
   }
 
+
   return (
     <>
     <div id="menu" className={color ? 'navegacion navegacion-bg' : 'navegacion'}>
@@ -38,7 +39,7 @@ function NavBar() {
         {Records &&
           Records.map((record) => {
             return (
-              <Link to="landing" spy={true} smooth={true} duration={500}>
+              <Link to="landing" spy={true} smooth={true} offset={-100} duration={500}>
                 <img src={record.icon} alt="" className="logo" />
               </Link>
             );
@@ -48,7 +49,7 @@ function NavBar() {
       <div className={`links ${clicked ? 'active' : ''}`}>
           <ul className={` ${clicked ? 'active' : ''}`}>
             <li> 
-              <Link to="landing" onClick={handleClose} spy={true} smooth={true} offset={-10} duration={500}>Home</Link> 
+              <Link to="landing" onClick={handleClose} spy={true} smooth={true} offset={-100} duration={500}>Home</Link> 
             </li>
 
             <li> 

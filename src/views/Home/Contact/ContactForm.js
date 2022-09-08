@@ -1,7 +1,8 @@
 import axios from "axios";
 import { useState } from "react";
-//import axios from "axios";
 import "./contactform.css";
+
+
 
 const ContactForm = () => {
   const [user, setUser] = useState({
@@ -11,10 +12,13 @@ const ContactForm = () => {
     subject: "",
     cmessage: "",
   });
+
   const [success, setSucces] = useState(false);
   const [error, setError] = useState(false);
 
   const disabled = !user.name || !user.email || !user.phone_number || !user.subject || !user.cmessage
+
+  
 
   const handleChange = function (event) {
     const property = event.target.name;
@@ -43,6 +47,7 @@ const ContactForm = () => {
         setError(true);
       });
   };
+
 
   return (
     <div id="contact" className="contact" onSubmit={handleSubmit}>
@@ -101,7 +106,7 @@ const ContactForm = () => {
 
         {success && (
           <div className="alert-succes">
-            Tus daton han sido enviados correctamente.
+            Tus datos han sido enviados correctamente.
           </div>
         )}
 

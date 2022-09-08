@@ -1,3 +1,4 @@
+
 import "./App.css";
 import "./views/Home/mediaquerys.css";
 
@@ -11,6 +12,7 @@ import Footer from "./views/Footer/Footer";
 import Acordeon from "./views/Home/Acordeon/Acordeon";
 
 function App() {
+
   return (
     <div className="App">
       <>
