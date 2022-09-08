@@ -38,7 +38,7 @@ function NavBar() {
         {Records &&
           Records.map((record) => {
             return (
-              <Link to="banner" spy={true} smooth={true} duration={500}>
+              <Link to="landing" spy={true} smooth={true} duration={500}>
                 <img src={record.icon} alt="" className="logo" />
               </Link>
             );
@@ -48,7 +48,7 @@ function NavBar() {
       <div className={`links ${clicked ? 'active' : ''}`}>
           <ul className={` ${clicked ? 'active' : ''}`}>
             <li> 
-              <Link to="banner" onClick={handleClose} spy={true} smooth={true} offset={-10} duration={500}>Home</Link> 
+              <Link to="landing" onClick={handleClose} spy={true} smooth={true} offset={-10} duration={500}>Home</Link> 
             </li>
 
             <li> 
@@ -65,10 +65,6 @@ function NavBar() {
 
             <li>
               <Link to="contact" onClick={handleClose} spy={true} smooth={true} offset={-80} duration={500}>Contacto</Link>
-            </li>
-                
-            <li>
-              <a href="/">Productos</a>
             </li>
           </ul>
 

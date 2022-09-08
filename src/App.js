@@ -8,6 +8,7 @@ import Services from "./views/Home/Services/Services";
 import Brand from "./views/Home/Brands/Brands";
 import ContactForm from "./views/Home/Contact/ContactForm";
 import Footer from "./views/Footer/Footer";
+import Acordeon from "./views/Home/Acordeon/Acordeon";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <AboutUs />
         <Services />
         <Brand />
+        <Acordeon/>
         <ContactForm />
         <Footer />
       </>

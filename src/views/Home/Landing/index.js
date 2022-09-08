@@ -1,11 +1,11 @@
+import Carrousel from "../Carrousel/Carrousel";
 import "./landing.css";
 
 function Landing() {
   return (
-    <>
-      <div id="banner" className="contain">
-        </div>
-    </>
+    <div className="landing" id="landing">
+      <Carrousel/>
+    </div>
   );
 }
 export default Landing;
