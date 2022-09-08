@@ -15,7 +15,7 @@ function Acordeon() {
               aria-expanded="true"
               aria-controls="collapseOne"
             >
-              Dieta sin gruten
+              Dieta sin gluten
             </button>
           </h2>
           <div
